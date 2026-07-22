@@ -1,10 +1,10 @@
-# Predict Physical Quantities Using Machine Learning
+# Predicting Superconducting Critical Temperature Using Machine Learning
 
 ## Project Overview
 
-This project applies Machine Learning techniques to predict the superconducting critical temperature (Tc) of materials using experimentally measured material descriptors.
+This project applies machine learning techniques to predict the superconducting critical temperature (Tc) of materials using experimentally measured material descriptors from the UCI Superconductivity Dataset.
 
-The objective is to investigate how computational methods can assist materials science research by learning relationships between physical properties and superconductivity.
+Multiple regression algorithms were developed and compared, including Linear Regression, Random Forest, Tuned Random Forest, and XGBoost. Model predictions were further interpreted using SHAP (SHapley Additive exPlanations) to improve transparency and understand the influence of different material properties on the predicted critical temperature.
 
 ---
 
@@ -26,13 +26,13 @@ Number of Features:
 ## Objectives
 
 - Perform Exploratory Data Analysis (EDA)
-- Build baseline Linear Regression model
-- Develop Random Forest Regression model
-- Compare model performance
-- Perform Feature Importance Analysis
-- Apply Cross Validation
-- Perform Hyperparameter Tuning
-- Analyze prediction residuals
+- Build a baseline Linear Regression model
+- Train Random Forest and XGBoost regression models
+- Optimize model performance using hyperparameter tuning
+- Evaluate models using MAE, RMSE, and R² score
+- Compare multiple machine learning algorithms
+- Interpret predictions using SHAP explainability
+- Save trained models for future deployment
 
 ---
 
@@ -41,26 +41,28 @@ Number of Features:
 1. Data Loading
 2. Data Cleaning
 3. Exploratory Data Analysis
-4. Feature Selection
+4. Feature Engineering
 5. Train-Test Split
 6. Linear Regression
 7. Random Forest Regression
-8. Model Evaluation
-9. Cross Validation
-10. Hyperparameter Optimization
-11. Residual Analysis
+8. Hyperparameter Tuning
+9. XGBoost Regression
+10. Model Evaluation
+11. SHAP Explainability
+12. Save Models and Results
 
 ---
 
-## Results
+## Model Performance
 
-| Model | R² Score |
-|--------|----------|
-| Linear Regression | 0.738 |
-| Random Forest | 0.927 |
-| Tuned Random Forest | 0.929 |
+| Model | MAE | RMSE | R² Score |
+|--------|----:|------:|---------:|
+| Linear Regression | 13.2105 | 17.3784 | 0.7376 |
+| Random Forest | 5.1621 | 9.1423 | 0.9274 |
+| Tuned Random Forest | **5.1732** | **9.0468** | **0.9289** |
+| XGBoost | 5.8431 | 9.3378 | 0.9242 |
 
-The Random Forest model significantly outperformed Linear Regression, demonstrating the ability of nonlinear ensemble methods to model complex relationships between material descriptors and superconducting critical temperature.
+The Tuned Random Forest achieved the best predictive performance, explaining approximately 92.9% of the variance in the superconducting critical temperature. XGBoost also demonstrated strong performance, while Linear Regression served as an effective baseline model.
 
 ---
 
@@ -73,6 +75,10 @@ The Random Forest model significantly outperformed Linear Regression, demonstrat
 - Scikit-learn
 - Joblib
 - Jupyter Notebook
+- XGBoost
+- SHAP
+- Git
+- GitHub
 
 ---
 
@@ -100,10 +106,11 @@ LICENSE
 
 ## Future Work
 
-- XGBoost Regression
-- Neural Networks
-- SHAP Explainability
-- Materials Discovery Applications
+- Develop a Streamlit web application for prediction
+- Refactor notebook code into reusable Python modules
+- Investigate deep learning approaches for superconductivity prediction
+- Explore physics-informed machine learning methods
+- Improve feature engineering and model optimization
 
 ---
 
