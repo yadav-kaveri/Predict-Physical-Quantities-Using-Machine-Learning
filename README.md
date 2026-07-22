@@ -2,23 +2,23 @@
 
 ## Project Overview
 
-This project applies machine learning techniques to predict the superconducting critical temperature (Tc) of materials using experimentally measured material descriptors from the UCI Superconductivity Dataset.
+This project develops and compares multiple machine learning regression models to predict the superconducting critical temperature (Tc) of materials using experimentally measured material descriptors from the UCI Superconductivity Dataset.
 
-Multiple regression algorithms were developed and compared, including Linear Regression, Random Forest, Tuned Random Forest, and XGBoost. Model predictions were further interpreted using SHAP (SHapley Additive exPlanations) to improve transparency and understand the influence of different material properties on the predicted critical temperature.
+The predictive performance of Linear Regression, Random Forest, Tuned Random Forest, and XGBoost is evaluated using standard regression metrics. The best-performing model is further interpreted using SHAP (SHapley Additive exPlanations) to identify the most influential material descriptors and improve model transparency.
 
 ---
 
 ## Dataset
 
-Dataset: Superconductivity Dataset (UCI Machine Learning Repository)
+**Dataset:** Superconductivity Dataset (UCI Machine Learning Repository)
 
-Target Variable:
+**Target Variable**
 - Critical Temperature (Tc)
 
-Number of Samples:
+**Number of Samples**
 - 21,263 superconducting materials
 
-Number of Features:
+**Number of Features**
 - 81 material descriptors
 
 ---
@@ -26,30 +26,31 @@ Number of Features:
 ## Objectives
 
 - Perform Exploratory Data Analysis (EDA)
-- Build a baseline Linear Regression model
+- Develop a baseline Linear Regression model
 - Train Random Forest and XGBoost regression models
-- Optimize model performance using hyperparameter tuning
+- Improve model performance through hyperparameter optimization
 - Evaluate models using MAE, RMSE, and R² score
-- Compare multiple machine learning algorithms
-- Interpret predictions using SHAP explainability
+- Compare the predictive performance of multiple machine learning models
+- Interpret model predictions using SHAP explainability
 - Save trained models for future deployment
 
 ---
 
 ## Machine Learning Workflow
 
-1. Data Loading
-2. Data Cleaning
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Train-Test Split
-6. Linear Regression
-7. Random Forest Regression
-8. Hyperparameter Tuning
-9. XGBoost Regression
-10. Model Evaluation
-11. SHAP Explainability
-12. Save Models and Results
+1. Import Libraries
+2. Load Dataset
+3. Dataset Overview
+4. Exploratory Data Analysis (EDA)
+5. Data Preprocessing
+6. Model Training
+   - Linear Regression
+   - Random Forest Regression
+   - Hyperparameter Optimization
+   - XGBoost Regression
+7. Model Comparison
+8. Model Explainability (SHAP)
+9. Conclusions
 
 ---
 
@@ -62,7 +63,7 @@ Number of Features:
 | Tuned Random Forest | **5.1732** | **9.0468** | **0.9289** |
 | XGBoost | 5.8431 | 9.3378 | 0.9242 |
 
-The Tuned Random Forest achieved the best predictive performance, explaining approximately 92.9% of the variance in the superconducting critical temperature. XGBoost also demonstrated strong performance, while Linear Regression served as an effective baseline model.
+The optimized Random Forest model achieved the best predictive performance with an **R² score of 0.9289**, demonstrating its ability to accurately model the nonlinear relationships between material descriptors and the superconducting critical temperature. XGBoost also produced strong results, while Linear Regression served as an effective baseline model.
 
 ---
 
@@ -73,10 +74,10 @@ The Tuned Random Forest achieved the best predictive performance, explaining app
 - NumPy
 - Matplotlib
 - Scikit-learn
-- Joblib
-- Jupyter Notebook
 - XGBoost
 - SHAP
+- Joblib
+- Jupyter Notebook
 - Git
 - GitHub
 
@@ -84,40 +85,41 @@ The Tuned Random Forest achieved the best predictive performance, explaining app
 
 ## Repository Structure
 
+```text
 Predict-Physical-Quantities-Using-Machine-Learning/
-
-data/
-
-figures/
-
-models/
-
-notebooks/
-
-src/
-
-README.md
-
-requirements.txt
-
-LICENSE
+│
+├── data/
+├── figures/
+├── models/
+├── notebooks/
+├── src/
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
 
 ---
 
 ## Future Work
 
-- Develop a Streamlit web application for prediction
-- Refactor notebook code into reusable Python modules
+- Develop a Streamlit web application for interactive predictions
 - Investigate deep learning approaches for superconductivity prediction
 - Explore physics-informed machine learning methods
-- Improve feature engineering and model optimization
+- Improve feature engineering and hyperparameter optimization
+- Extend the framework to predict other material properties
 
 ---
 
 ## Author
 
-Kaveri Yadav
+**Kaveri Yadav**
 
-M.Sc. Physics
+**M.Sc. Physics**
 
-Interested in Computational Materials Science, Machine Learning, AI Research, and Quantitative Modeling.
+**Research Interests**
+
+- Computational Materials Science
+- Machine Learning
+- Explainable AI (XAI)
+- AI Research
+- Quantitative Modeling
