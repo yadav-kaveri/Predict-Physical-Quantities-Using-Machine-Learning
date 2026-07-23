@@ -106,7 +106,7 @@ The optimized Random Forest achieved the highest predictive performance while ma
 ## Repository Structure
 
 ```text
-Predict-Physical-Quantities-Using-Machine-Learning/
+superconductivity-critical-temperature-prediction
 ├── data/
 ├── figures/
 ├── models/
