@@ -1,10 +1,19 @@
-# Predicting Superconducting Critical Temperature Using Machine Learning
+# Machine Learning-Based Prediction of Superconducting Critical Temperature Using Material Descriptors
 
 ## Project Overview
 
 This project develops and compares multiple machine learning regression models to predict the superconducting critical temperature (Tc) of materials using experimentally measured material descriptors from the UCI Superconductivity Dataset.
 
 The predictive performance of Linear Regression, Random Forest, Tuned Random Forest, and XGBoost is evaluated using standard regression metrics. The best-performing model is further interpreted using SHAP (SHapley Additive exPlanations) to identify the most influential material descriptors and improve model transparency.
+
+---
+
+## Project Highlights
+
+- Developed four supervised regression models for superconducting critical temperature prediction.
+- Achieved an R² score of **0.9289** using an optimized Random Forest model.
+- Applied SHAP explainability to interpret model predictions.
+- Compared model performance using MAE, RMSE, and R² Score.
 
 ---
 
@@ -67,6 +76,17 @@ The optimized Random Forest model achieved the best predictive performance with 
 
 ---
 
+## Key Results
+
+- Best Model: Tuned Random Forest
+- R² Score: **0.9289**
+- RMSE: **9.0468**
+- MAE: **5.1732**
+
+The optimized Random Forest achieved the highest predictive performance while maintaining strong generalization capability. SHAP analysis identified the most influential material descriptors contributing to superconducting critical temperature predictions.
+
+---
+
 ## Technologies Used
 
 - Python
@@ -87,11 +107,13 @@ The optimized Random Forest model achieved the best predictive performance with 
 
 ```text
 Predict-Physical-Quantities-Using-Machine-Learning/
-│
 ├── data/
 ├── figures/
 ├── models/
 ├── notebooks/
+├── report/
+│   ├── Research_Report.pdf
+│   └── Research_Report.docx
 ├── src/
 ├── README.md
 ├── requirements.txt
@@ -102,11 +124,11 @@ Predict-Physical-Quantities-Using-Machine-Learning/
 
 ## Future Work
 
-- Develop a Streamlit web application for interactive predictions
-- Investigate deep learning approaches for superconductivity prediction
-- Explore physics-informed machine learning methods
-- Improve feature engineering and hyperparameter optimization
-- Extend the framework to predict other material properties
+- Develop an interactive Streamlit application for superconductivity prediction.
+- Investigate deep learning models for superconducting materials.
+- Explore Physics-Informed Machine Learning (PIML) techniques.
+- Evaluate additional ensemble learning algorithms such as CatBoost and LightGBM.
+- Extend the framework to predict other material properties.
 
 ---
 
@@ -114,12 +136,12 @@ Predict-Physical-Quantities-Using-Machine-Learning/
 
 **Kaveri Yadav**
 
-**M.Sc. Physics**
+Master of Science in Physics
 
-**Research Interests**
+### Research Interests
 
 - Computational Materials Science
 - Machine Learning
-- Explainable AI (XAI)
+- Explainable Artificial Intelligence (XAI)
 - AI Research
 - Quantitative Modeling
